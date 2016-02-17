@@ -1,4 +1,5 @@
 # modis-hdf-java
-Modis and HDF data exraction tools
+Modis and HDF data extraction tools
 Requirements
 - HDFView, hdfjava libs in classpath
+
