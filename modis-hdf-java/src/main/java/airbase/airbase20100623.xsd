@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- definition of simple elements -->
+<xsd:simpleType name="AirBaseCode">
+  <xsd:restriction base="xsd:string">
+     <xsd:pattern value="[A-Z][A-Z]([0-9])+[A-Z]"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="OneCharString">
+  <xsd:restriction base="xsd:string">
+     <xsd:pattern value="[A-Z0-9\-]"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="TenCharString">
+  <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="10"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="TwentyCharString">
+  <xsd:restriction base="xsd:token">
+     <xsd:maxLength value="20"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="NameString">
+  <xsd:restriction base="xsd:string">
+     <xsd:whiteSpace value="collapse"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="AddressString">
+  <xsd:restriction base="xsd:string">
+     <xsd:whiteSpace value="collapse"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="CountryCode">
+  <xsd:restriction base="xsd:string">
+     <xsd:pattern value="[A-Z][A-Z]"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="CodeId">
+   <xsd:restriction base="xsd:nonNegativeInteger"/>
+</xsd:simpleType>
+<xsd:simpleType name="DateValue">
+   <xsd:restriction base="xsd:date"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="ChoiceString">
+  <xsd:restriction base="xsd:string">
+     <xsd:pattern value="Y|N|YES|NO|yes|no"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="PeriodString">
+  <xsd:restriction base="xsd:string">
+     <xsd:pattern value="year|month|week|day|hour|minute|second"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="PhoneNumber">
+  <xsd:restriction base="xsd:string">
+     <xsd:whiteSpace value="collapse"/>
+     <xsd:maxLength value="16"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="Coordinate">
+  <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="14"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:attribute name="code">
+   <xsd:simpleType>
+      <xsd:restriction base="xsd:integer">
+         <xsd:minInclusive value="10"/>
+         <xsd:maxInclusive value="99"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+</xsd:attribute>
+
+<xsd:complexType name="meteotype" >
+  <xsd:simpleContent>
+     <xsd:extension base="xsd:string">
+         <xsd:attribute ref="code" use="required"/>
+     </xsd:extension>
+  </xsd:simpleContent>
+</xsd:complexType>
+
+
+<!-- definition of country elements -->
+<xsd:element name="country_name" type="NameString"/>
+<xsd:element name="country_eu_member" type="ChoiceString"/>
+<xsd:element name="country_iso_code" type="CountryCode"/>
+
+
+<!-- definition of network elements -->
+<xsd:element name="network_name" type="NameString"/>
+<xsd:element name="network_short_name" type="NameString"/>
+<xsd:element name="network_code" type="AirBaseCode"/>
+<xsd:element name="network_start_date" type="DateValue"/>
+<xsd:element name="network_end_date" type="DateValue" />
+
+<xsd:element name="organization_name" type="NameString"/>
+<xsd:element name="organization_address" type="AddressString"/>
+<xsd:element name="organization_website_address" type="xsd:string"/>
+<xsd:element name="organization_city" type="xsd:string"/>
+<xsd:element name="organization_phone_number" type="PhoneNumber"/>
+<xsd:element name="organization_fax_number" type="PhoneNumber"/>
+
+<xsd:element name="person_last_name" type="NameString"/>
+<xsd:element name="person_first_name" type="NameString"/>
+<xsd:element name="person_title" type="TwentyCharString" />
+<xsd:element name="person_email_address" type="xsd:string"/>
+
+
+<xsd:element name="network_time_reference_basis">
+  <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+        <xsd:pattern value="CET|CGT|EET|MSK|UTC|ZP4"/>
+     </xsd:restriction>
+  </xsd:simpleType>
+</xsd:element>
+
+<xsd:element name="network_type">
+  <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+        <xsd:pattern value="local|national|regional|urban"/>
+     </xsd:restriction>
+   </xsd:simpleType>
+</xsd:element>
+
+<xsd:element name="person">
+<xsd:complexType>
+  <xsd:all>
+   <xsd:element ref="person_last_name" minOccurs="0" maxOccurs="1"/>
+   <xsd:element ref="person_first_name" minOccurs="0" maxOccurs="1"/>
+   <xsd:element ref="person_title" minOccurs="0" maxOccurs="1"/>
+   <xsd:element ref="person_email_address" minOccurs="0" maxOccurs="1"/>
+  </xsd:all>
+</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="organization">
+<xsd:complexType>
+  <xsd:all>
+   <xsd:element ref="organization_name" minOccurs="0" />
+   <xsd:element ref="organization_address" minOccurs="0" />
+   <xsd:element ref="organization_city" minOccurs="0" />
+   <xsd:element ref="organization_website_address" minOccurs="0" />
+   <xsd:element ref="organization_phone_number" minOccurs="0" />
+   <xsd:element ref="organization_fax_number" minOccurs="0" />
+  </xsd:all>
+</xsd:complexType>
+</xsd:element>
+
+
+<xsd:complexType name="network_function">
+   <xsd:sequence>
+   	<xsd:element ref="organization" minOccurs="0" />
+	<xsd:element ref="person" minOccurs="0"  />
+   </xsd:sequence>
+</xsd:complexType>
+
+<xsd:element name="network_manager" type="network_function" />
+<xsd:element name="network_data_supplier" type="network_function" />
+
+
+<!-- definition of station elements -->
+<xsd:element name="station_name" type="NameString"/>
+<xsd:element name="station_start_date" type="DateValue" />
+<xsd:element name="station_end_date" type="DateValue" />
+<xsd:element name="station_city" type="xsd:string"/>
+<xsd:element name="EMEP_station" type="ChoiceString"/>
+<xsd:element name="station_description" type="xsd:string"/>
+<xsd:element name="station_latitude_decimal_degrees" type="xsd:decimal"/>
+<xsd:element name="station_longitude_decimal_degrees" type="xsd:decimal"/>
+<xsd:element name="station_latitude_dms" type="Coordinate"/>
+<xsd:element name="station_longitude_dms" type="Coordinate"/>
+<xsd:element name="station_altitude" type="xsd:integer"/>
+<xsd:element name="station_characteristic_of_zone" type="xsd:string"/>
+<xsd:element name="main_emission_source" type="xsd:string"/>
+<xsd:element name="station_area_of_representativeness" type="xsd:decimal"/>
+<xsd:element name="station_represented_length_of_street" type="xsd:decimal"/>
+<xsd:element name="station_represented_radius" type="xsd:decimal"/>
+<xsd:element name="station_distance_from_kerb" type="xsd:decimal"/>
+<xsd:element name="station_distance_to_source" type="xsd:decimal"/>
+<xsd:element name="station_distance_to_junction" type="xsd:decimal"/>
+<xsd:element name="population" type="xsd:decimal"/>
+<xsd:element name="number_of_vehicles" type="xsd:nonNegativeInteger"/>
+<xsd:element name="station_lorry_percentage" type="xsd:decimal"/>
+<xsd:element name="station_traffic_speed" type="xsd:decimal"/>
+<xsd:element name="station_ratio_distance" type="xsd:decimal"/>
+<xsd:element name="station_street_width" type="xsd:decimal"/>
+<xsd:element name="monitoring_obj" type="xsd:string"/>
+<xsd:element name="monitoring_obj_other_text" type="xsd:string"/>
+<xsd:element name="meteorological_parameter" type="meteotype"/>
+<xsd:element name="sabe_unit_name" type="NameString"/>
+<xsd:element name="street_name" type="NameString"/>
+<xsd:element name="street_type" type="xsd:string"/>
+
+<xsd:element name="station_european_code">
+<xsd:simpleType>
+  <xsd:restriction base="xsd:string">
+     <xsd:pattern value="[A-Z][A-Z]([A-Z0-9]{5})"/>
+  </xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+  
+<xsd:element name="station_local_code">
+<xsd:simpleType>
+  <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="10"/>
+  </xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+
+<xsd:element name="station_airbase_code">
+<xsd:simpleType>
+  <xsd:restriction base="xsd:string">
+     <xsd:pattern value="[A-Z][A-Z]([A-Z0-9]{5})"/>
+  </xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+  
+<xsd:element name="type_of_station">
+<xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+         <xsd:pattern value="Background|Industrial|Traffic|Unknown"/>
+     </xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+
+<xsd:element name="station_type_of_area">
+  <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+        <xsd:pattern value="rural|suburban|urban|unknown"/>
+     </xsd:restriction>
+  </xsd:simpleType>
+</xsd:element>
+
+<xsd:element name="station_ozone_classification">
+  <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+        <xsd:pattern value="rural|rural background|suburban|urban|unknown"/>
+     </xsd:restriction>
+  </xsd:simpleType>
+</xsd:element>
+
+<xsd:element name="station_subcategory_rural_background">
+  <xsd:simpleType>
+     <xsd:restriction base="xsd:string">
+     <xsd:pattern value="near city|regional|remote|unknown"/>
+     </xsd:restriction>
+   </xsd:simpleType>
+</xsd:element>
+
+<xsd:group name="station_snap">
+  <xsd:sequence>
+   <xsd:element name="snap1" type="xsd:string"/>
+   <xsd:element name="snap2" type="xsd:string"/>
+   <xsd:element name="snap3" type="xsd:string"/>
+  </xsd:sequence>
+</xsd:group>
+
+<xsd:group name="AreaDescription">
+   <xsd:sequence>
+        <xsd:element name="station_nuts_level0" type="CountryCode"/>
+   	<xsd:element name="station_nuts_level1" type="OneCharString" default="-"/>
+   	<xsd:element name="station_nuts_level2" type="OneCharString" default="-"/>
+   	<xsd:element name="station_nuts_level3" type="OneCharString" default="-"/>
+   	<xsd:element name="lau_level1_code" type="TenCharString" minOccurs="0" maxOccurs="1" />
+   	<xsd:element name="lau_level2_code" type="TenCharString" minOccurs="0" maxOccurs="1" />
+   	<xsd:element name="lau_level2_name" type="NameString" minOccurs="0" maxOccurs="1" />
+        <xsd:element name="sabe_country_code" type="CountryCode" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="sabe_unit_code" type="TwentyCharString" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="sabe_unit_name" type="NameString" minOccurs="0" maxOccurs="1"/>
+   </xsd:sequence>
+</xsd:group>
+
+<!-- definition of measurement configuration elements -->
+<xsd:element name="component_code" type="CodeId"/>
+<xsd:element name="component_name" type="NameString"/>
+<xsd:element name="component_caption" type="NameString"/>
+<xsd:element name="component_FWD" type="ChoiceString"/>
+
+<xsd:element name="measurement_group_start_date" type="DateValue" />
+<xsd:element name="measurement_group_end_date" type="DateValue" />
+<xsd:element name="measurement_latest_date_available_in_AIRBASE" type="DateValue"/>
+<xsd:element name="measurement_start_date" type="DateValue" />
+<xsd:element name="measurement_end_date" type="DateValue" />
+<xsd:element name="measurement_european_group_code" type="CodeId"/>
+<xsd:element name="measurement_european_code" type="CodeId"/>
+<xsd:element name="measurement_unit" type="xsd:string"/>
+<xsd:element name="measurement_automatic" type="ChoiceString"/>
+<xsd:element name="measurement_technique_principle" type="xsd:string"/>
+<xsd:element name="measurement_equipment" type="xsd:string"/>
+<xsd:element name="integration_time_frequency" type="xsd:decimal"/>
+<xsd:element name="integration_time_unit" type="PeriodString"/>
+<xsd:element name="height_sampling_point" type="xsd:integer"/>
+<xsd:element name="length_sampling_line" type="xsd:integer"/>
+<xsd:element name="location_sampling_point" type="xsd:string"/>
+<xsd:element name="sampling_time" type="xsd:integer"/>
+<xsd:element name="sampling_time_unit" type="xsd:string"/>
+<xsd:element name="calibration_frequency" type="xsd:decimal"/>
+<xsd:element name="calibration_unit" type="PeriodString"/>
+<xsd:element name="calibration_method" type="xsd:string"/>
+<xsd:element name="calibration_description" type="xsd:string"/>
+<xsd:element name="body_or_programme" type="xsd:string"/>
+
+
+<!-- definition of statistic elements -->
+<xsd:element name="statistics_period" type="xsd:string"/>
+
+<xsd:element name="statistics_percentage_valid">
+<xsd:simpleType>
+   <xsd:restriction base="xsd:decimal">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="100"/>
+   </xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+
+<xsd:element name="statistics_number_valid">
+<xsd:simpleType>
+   <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="-99"/>
+   </xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="statistics_calculated" type="ChoiceString"/>
+
+<xsd:element name="statistic_result">
+   <xsd:complexType>
+      <xsd:all>
+          <xsd:element name="statistic_name" type="NameString"/>
+          <xsd:element name="statistic_shortname" type="NameString" minOccurs="0"/>
+          <xsd:element name="statistic_value" type="xsd:decimal"/>
+      </xsd:all>
+   </xsd:complexType>
+</xsd:element>
+
+<xsd:attribute name="type">
+   <xsd:simpleType>
+      <xsd:restriction base="xsd:string">
+         <xsd:pattern value="General|Exceedances|AOT"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+</xsd:attribute>
+
+<xsd:attribute name="value">
+   <xsd:simpleType>
+      <xsd:restriction base="xsd:string"/>
+   </xsd:simpleType>
+</xsd:attribute>
+
+<xsd:attribute name="Year">
+   <xsd:simpleType>
+      <xsd:restriction base="xsd:integer">
+         <xsd:minInclusive value="1900"/>
+         <xsd:maxInclusive value="3000"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+</xsd:attribute>
+
+<xsd:element name="statistic_set">
+<xsd:complexType >
+  <xsd:sequence>
+     <xsd:element ref="statistics_percentage_valid" />
+     <xsd:element ref="statistics_number_valid" />
+     <xsd:element ref="statistics_calculated"/>
+     <xsd:element ref="statistic_result" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+  <xsd:attribute ref="type" use="required"/>
+</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="statistics_average_group">
+<xsd:complexType>
+  <xsd:sequence>
+     <xsd:element ref="statistics_period"/>
+     <xsd:element ref="statistic_set" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+  <xsd:attribute ref="value" use="required"/>
+</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="statistics">
+<xsd:complexType>
+  <xsd:sequence>
+     <xsd:element ref="statistics_average_group" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+  <xsd:attribute ref="Year" use="required"/>
+</xsd:complexType>
+</xsd:element>
+
+
+<!-- definition of result elements -->
+<xsd:element name="start_date" type="DateValue" />
+<xsd:element name="end_date" type="DateValue" />
+<xsd:element name="data_file" type="xsd:string"/>
+
+<xsd:element name="data_type">
+<xsd:complexType>
+  <xsd:sequence>
+     <xsd:element ref="start_date"/>
+     <xsd:element ref="end_date"/>
+     <xsd:element ref="data_file" minOccurs="0" maxOccurs="1"/>
+  </xsd:sequence>
+  <xsd:attribute ref="value" use="required"/>
+</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="data_set">
+<xsd:complexType>
+  <xsd:sequence>
+     <xsd:element ref="data_type" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+
+
+
+<!-- definition of measurement configuration -->
+<xsd:attribute name="current_since" type="xsd:date"/>
+
+<xsd:element name="measurement_info">
+<xsd:complexType>
+  <xsd:sequence>
+     <xsd:element ref="measurement_european_code"/>
+     <xsd:element ref="measurement_start_date"/>
+     <xsd:element ref="measurement_end_date" minOccurs="0"/>
+     <xsd:element ref="measurement_automatic" minOccurs="0"/>
+     <xsd:element ref="measurement_technique_principle" minOccurs="0"/>
+     <xsd:element ref="measurement_equipment" minOccurs="0"/>
+     <xsd:element ref="integration_time_frequency" minOccurs="0"/>
+     <xsd:element ref="calibration_unit" minOccurs="0"/>
+     <xsd:element ref="height_sampling_point" minOccurs="0"/>
+     <xsd:element ref="length_sampling_line" minOccurs="0"/>
+     <xsd:element ref="location_sampling_point" minOccurs="0"/>
+     <xsd:element ref="sampling_time" minOccurs="0"/>
+     <xsd:element ref="sampling_time_unit" minOccurs="0"/>
+     <xsd:element ref="calibration_frequency" minOccurs="0"/>
+     <xsd:element ref="integration_time_unit" minOccurs="0"/>
+     <xsd:element ref="calibration_method" minOccurs="0"/>
+     <xsd:element ref="calibration_description" minOccurs="0"/>
+     <xsd:element ref="body_or_programme" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+  <xsd:attribute ref="current_since" use="required"/>
+</xsd:complexType>
+</xsd:element>
+
+<xsd:attribute name="component" type="xsd:string"/>
+
+<xsd:element name="measurement_configuration">
+<xsd:complexType>
+  <xsd:sequence>
+     <xsd:element ref="component_name"/>
+     <xsd:element ref="component_caption"/>
+     <xsd:element ref="component_code"/>
+     <xsd:element ref="component_FWD"/>
+     <xsd:element ref="measurement_unit" minOccurs="0"/>
+     <xsd:element ref="measurement_european_group_code" minOccurs="0"/>
+     <xsd:element ref="measurement_group_start_date"/>
+     <xsd:element ref="measurement_group_end_date" minOccurs="0"/>
+     <xsd:element ref="measurement_latest_date_available_in_AIRBASE" minOccurs="0"/>
+     <xsd:element ref="measurement_info" minOccurs="1" maxOccurs="unbounded"/>
+     <xsd:element ref="data_set" minOccurs="0" maxOccurs="unbounded"/>
+     <xsd:element ref="statistics" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+  <xsd:attribute ref="component" use="required"/>
+</xsd:complexType>
+</xsd:element>
+
+
+
+<!-- definition of station  -->
+
+
+<xsd:element name="station_info">
+<xsd:complexType>
+  <xsd:sequence>
+     <xsd:element ref="EMEP_station"/>
+     <xsd:element ref="station_local_code" minOccurs="0"/>
+     <xsd:element ref="station_airbase_code" minOccurs="0"/>
+     <xsd:element ref="station_name"/>
+     <xsd:element ref="station_description" minOccurs="0"/>
+     <xsd:group ref="AreaDescription" minOccurs="0"/>
+     <xsd:element ref="station_start_date"/>
+     <xsd:element ref="station_end_date" minOccurs="0"/>
+     <xsd:element ref="station_latitude_decimal_degrees" />
+     <xsd:element ref="station_longitude_decimal_degrees" />
+     <xsd:element ref="station_latitude_dms" />
+     <xsd:element ref="station_longitude_dms" />
+     <xsd:element ref="station_altitude" />
+     <xsd:element ref="type_of_station" minOccurs="0"/>
+     <xsd:element ref="station_type_of_area" minOccurs="0"/>
+     <xsd:element ref="station_characteristic_of_zone" minOccurs="0"/>
+     <xsd:element ref="station_ozone_classification" minOccurs="0"/>
+     <xsd:element ref="main_emission_source" minOccurs="0"/>
+     <xsd:element ref="station_area_of_representativeness" minOccurs="0"/>
+     <xsd:element ref="station_represented_length_of_street" minOccurs="0"/>
+     <xsd:element ref="station_represented_radius" minOccurs="0"/>
+     <xsd:element ref="station_distance_from_kerb" minOccurs="0"/>
+     <xsd:element ref="station_distance_to_source" minOccurs="0"/>
+     <xsd:element ref="station_distance_to_junction" minOccurs="0"/>
+     <xsd:group ref="station_snap" minOccurs="0"/>
+     <xsd:element ref="station_subcategory_rural_background" minOccurs="0" />
+     <xsd:element ref="station_city" minOccurs="0"/>
+     <xsd:element ref="population" minOccurs="0"/>
+     <xsd:element ref="street_name" minOccurs="0"/>
+     <xsd:element ref="street_type" minOccurs="0"/>
+     <xsd:element ref="number_of_vehicles" minOccurs="0"/>
+     <xsd:element ref="station_lorry_percentage" minOccurs="0"/>
+     <xsd:element ref="station_traffic_speed" minOccurs="0"/>
+     <xsd:element ref="station_ratio_distance" minOccurs="0"/>
+     <xsd:element ref="station_street_width" minOccurs="0"/>
+     <xsd:element ref="monitoring_obj" minOccurs="0" maxOccurs="unbounded"/>
+     <xsd:element ref="monitoring_obj_other_text" minOccurs="0" />
+     <xsd:element ref="meteorological_parameter" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+
+<!-- definition of network  -->
+<xsd:element name="network">
+<xsd:complexType>
+   <xsd:sequence>
+   	<xsd:element ref="network_code" />
+   	<xsd:element ref="network_name" />
+   	<xsd:element ref="network_short_name" minOccurs="0"/>
+   	<xsd:element ref="network_start_date" />
+   	<xsd:element ref="network_time_reference_basis" />
+   	<xsd:element ref="network_end_date" minOccurs="0"/>
+   	<xsd:element ref="network_type" minOccurs="0"/>
+   	<xsd:element ref="network_manager" minOccurs="0" />
+	<xsd:element ref="network_data_supplier" minOccurs="0" />
+   </xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="network_info">
+  <xsd:complexType>
+    <xsd:sequence>
+       <xsd:element ref="network_code" />
+       <xsd:element ref="network_time_reference_basis" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:element>
+<xsd:attribute name="Id" type="xsd:string"/>
+
+<xsd:element name="station">
+<xsd:complexType>
+  <xsd:sequence>
+     <xsd:element ref="station_european_code"/>
+     <xsd:element ref="network_info" minOccurs="0" maxOccurs="unbounded"/>
+     <xsd:element ref="station_info"/>
+     <xsd:element ref="measurement_configuration" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+  <xsd:attribute ref="Id" use="required"/>
+</xsd:complexType>
+</xsd:element>
+
+<!-- definition of country  -->
+<xsd:element name="airbase">
+   <xsd:complexType>
+      <xsd:sequence>
+          <xsd:element name="country" minOccurs="0" maxOccurs="unbounded">
+             <xsd:complexType>
+                <xsd:sequence>
+   	           <xsd:element ref="country_name" />
+   	           <xsd:element ref="country_iso_code" />
+   	           <xsd:element ref="country_eu_member"/>
+                   <xsd:element ref="network" minOccurs="0" maxOccurs="unbounded"/>
+	           <xsd:element ref="station" minOccurs="0" maxOccurs="unbounded"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+       </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+</xsd:schema>

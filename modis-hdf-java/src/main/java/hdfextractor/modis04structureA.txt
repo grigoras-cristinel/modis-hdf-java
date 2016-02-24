@@ -1,0 +1,1264 @@
+/ (0, 0)
+    Group size = 17
+    Number of attributes = 8
+        HDFEOSVersion = HDFEOS_V2.9
+        StructMetadata.0 = GROUP=SwathStructure
+	GROUP=SWATH_1
+		SwathName="mod04"
+		GROUP=Dimension
+			OBJECT=Dimension_1
+			static final int Dim_Cell_Along_Swath =203
+			END_OBJECT=Dimension_1
+			OBJECT=Dimension_2
+			static final int Dim_Cell_Across_Swath =135
+			END_OBJECT=Dimension_2
+			OBJECT=Dimension_3
+			static final int Dim_Solution_3_Land =3
+			END_OBJECT=Dimension_3
+			OBJECT=Dimension_4
+			static final int Dim_Solution_1_Land =2
+			END_OBJECT=Dimension_4
+			OBJECT=Dimension_5
+			static final int Dim_Solution_2_Land =3
+			END_OBJECT=Dimension_5
+			OBJECT=Dimension_6
+			static final int Dim_Solution_4_Land =4
+			END_OBJECT=Dimension_6
+			OBJECT=Dimension_7
+			static final int Dim_MODIS_Band_Land =7
+			END_OBJECT=Dimension_7
+			OBJECT=Dimension_8
+			static final int Dim_QA_Byte_Land =5
+			END_OBJECT=Dimension_8
+			OBJECT=Dimension_9
+			static final int Dim_Num_By_Products =7
+			END_OBJECT=Dimension_9
+			OBJECT=Dimension_10
+			static final int Dim_Solution_Ocean =2
+			END_OBJECT=Dimension_10
+			OBJECT=Dimension_11
+			static final int Dim_MODIS_Band_Ocean =7
+			END_OBJECT=Dimension_11
+			OBJECT=Dimension_12
+			static final int Dim_Solution_Index =9
+			END_OBJECT=Dimension_12
+			OBJECT=Dimension_13
+			static final int Dim_QA_Byte_Ocean =5
+			END_OBJECT=Dimension_13
+			OBJECT=Dimension_14
+			static final int Dim_Num_DeepBlue_Wavelengths =3
+			END_OBJECT=Dimension_14
+		END_GROUP=Dimension
+		GROUP=DimensionMap
+		END_GROUP=DimensionMap
+		GROUP=IndexDimensionMap
+		END_GROUP=IndexDimensionMap
+		GROUP=GeoField
+			OBJECT=GeoField_1
+				GeoFieldName="Longitude"
+				DataType=DFNT_FLOAT32
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=GeoField_1
+			OBJECT=GeoField_2
+				GeoFieldName="Latitude"
+				DataType=DFNT_FLOAT32
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=GeoField_2
+		END_GROUP=GeoField
+		GROUP=DataField
+			OBJECT=DataField_1
+				DataFieldName="MODIS_Band_Land"
+				DataType=DFNT_INT32
+				DimList=("MODIS_Band_Land")
+			END_OBJECT=DataField_1
+			OBJECT=DataField_2
+				DataFieldName="MODIS_Band_Ocean"
+				DataType=DFNT_INT32
+				DimList=("MODIS_Band_Ocean")
+			END_OBJECT=DataField_2
+			OBJECT=DataField_3
+				DataFieldName="Solution_1_Land"
+				DataType=DFNT_INT32
+				DimList=("Solution_1_Land")
+			END_OBJECT=DataField_3
+			OBJECT=DataField_4
+				DataFieldName="Solution_2_Land"
+				DataType=DFNT_INT32
+				DimList=("Solution_2_Land")
+			END_OBJECT=DataField_4
+			OBJECT=DataField_5
+				DataFieldName="Solution_3_Land"
+				DataType=DFNT_INT32
+				DimList=("Solution_3_Land")
+			END_OBJECT=DataField_5
+			OBJECT=DataField_6
+				DataFieldName="Solution_Ocean"
+				DataType=DFNT_INT32
+				DimList=("Solution_Ocean")
+			END_OBJECT=DataField_6
+			OBJECT=DataField_7
+				DataFieldName="Solution_Index"
+				DataType=DFNT_INT32
+				DimList=("Solution_Index")
+			END_OBJECT=DataField_7
+			OBJECT=DataField_8
+				DataFieldName="Num_DeepBlue_Wavelengths"
+				DataType=DFNT_INT32
+				DimList=("Num_DeepBlue_Wavelengths")
+			END_OBJECT=DataField_8
+			OBJECT=DataField_9
+				DataFieldName="Scan_Start_Time"
+				DataType=DFNT_FLOAT64
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_9
+			OBJECT=DataField_10
+				DataFieldName="Solar_Zenith"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_10
+			OBJECT=DataField_11
+				DataFieldName="Solar_Azimuth"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_11
+			OBJECT=DataField_12
+				DataFieldName="Sensor_Zenith"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_12
+			OBJECT=DataField_13
+				DataFieldName="Sensor_Azimuth"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_13
+			OBJECT=DataField_14
+				DataFieldName="Cloud_Mask_QA"
+				DataType=DFNT_INT8
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_14
+			OBJECT=DataField_15
+				DataFieldName="Scattering_Angle"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_15
+			OBJECT=DataField_16
+				DataFieldName="Optical_Depth_Land_And_Ocean"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_16
+			OBJECT=DataField_17
+				DataFieldName="Image_Optical_Depth_Land_And_Ocean"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_17
+			OBJECT=DataField_18
+				DataFieldName="Optical_Depth_Ratio_Small_Land_And_Ocean"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_18
+			OBJECT=DataField_19
+				DataFieldName="Mean_Reflectance_Land_All"
+				DataType=DFNT_INT16
+				DimList=("Solution_3_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_19
+			OBJECT=DataField_20
+				DataFieldName="Standard_Deviation_Reflectance_Land_All"
+				DataType=DFNT_INT16
+				DimList=("Solution_3_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_20
+			OBJECT=DataField_21
+				DataFieldName="Path_Radiance_Land"
+				DataType=DFNT_INT16
+				DimList=("Solution_1_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_21
+			OBJECT=DataField_22
+				DataFieldName="Error_Path_Radiance_Land"
+				DataType=DFNT_INT16
+				DimList=("Solution_1_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_22
+			OBJECT=DataField_23
+				DataFieldName="Critical_Reflectance_Land"
+				DataType=DFNT_INT16
+				DimList=("Solution_1_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_23
+			OBJECT=DataField_24
+				DataFieldName="Error_Critical_Reflectance_Land"
+				DataType=DFNT_INT16
+				DimList=("Solution_1_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_24
+			OBJECT=DataField_25
+				DataFieldName="QualityWeight_Path_Radiance_Land"
+				DataType=DFNT_INT16
+				DimList=("Solution_1_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_25
+			OBJECT=DataField_26
+				DataFieldName="QualityWeight_Critical_Reflectance_Land"
+				DataType=DFNT_INT16
+				DimList=("Solution_1_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_26
+			OBJECT=DataField_27
+				DataFieldName="Aerosol_Type_Land"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_27
+			OBJECT=DataField_28
+				DataFieldName="Fitting_Error_Land"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_28
+			OBJECT=DataField_29
+				DataFieldName="Surface_Reflectance_Land"
+				DataType=DFNT_INT16
+				DimList=("Solution_2_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_29
+			OBJECT=DataField_30
+				DataFieldName="Corrected_Optical_Depth_Land"
+				DataType=DFNT_INT16
+				DimList=("Solution_3_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_30
+			OBJECT=DataField_31
+				DataFieldName="Corrected_Optical_Depth_Land_wav2p1"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_31
+			OBJECT=DataField_32
+				DataFieldName="Optical_Depth_Small_Land"
+				DataType=DFNT_INT16
+				DimList=("Solution_4_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_32
+			OBJECT=DataField_33
+				DataFieldName="Optical_Depth_Ratio_Small_Land"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_33
+			OBJECT=DataField_34
+				DataFieldName="Number_Pixels_Used_Land"
+				DataType=DFNT_INT16
+				DimList=("Solution_1_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_34
+			OBJECT=DataField_35
+				DataFieldName="Mean_Reflectance_Land"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_35
+			OBJECT=DataField_36
+				DataFieldName="STD_Reflectance_Land"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Land","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_36
+			OBJECT=DataField_37
+				DataFieldName="Mass_Concentration_Land"
+				DataType=DFNT_FLOAT32
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_37
+			OBJECT=DataField_38
+				DataFieldName="Angstrom_Exponent_Land"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_38
+			OBJECT=DataField_39
+				DataFieldName="Cloud_Fraction_Land"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_39
+			OBJECT=DataField_40
+				DataFieldName="Quality_Assurance_Land"
+				DataType=DFNT_INT8
+				DimList=("Cell_Along_Swath","Cell_Across_Swath","QA_Byte_Land")
+			END_OBJECT=DataField_40
+			OBJECT=DataField_41
+				DataFieldName="Quality_Assurance_Crit_Ref_Land"
+				DataType=DFNT_INT8
+				DimList=("Cell_Along_Swath","Cell_Across_Swath","QA_Byte_Land")
+			END_OBJECT=DataField_41
+			OBJECT=DataField_42
+				DataFieldName="Aerosol_Cldmask_Byproducts_Land"
+				DataType=DFNT_INT16
+				DimList=("Num_By_Products","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_42
+			OBJECT=DataField_43
+				DataFieldName="Solution_Index_Ocean_Small"
+				DataType=DFNT_INT16
+				DimList=("Solution_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_43
+			OBJECT=DataField_44
+				DataFieldName="Solution_Index_Ocean_Large"
+				DataType=DFNT_INT16
+				DimList=("Solution_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_44
+			OBJECT=DataField_45
+				DataFieldName="Effective_Optical_Depth_Best_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_45
+			OBJECT=DataField_46
+				DataFieldName="Effective_Optical_Depth_Average_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_46
+			OBJECT=DataField_47
+				DataFieldName="Optical_Depth_Small_Best_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_47
+			OBJECT=DataField_48
+				DataFieldName="Optical_Depth_Small_Average_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_48
+			OBJECT=DataField_49
+				DataFieldName="Optical_Depth_Large_Best_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_49
+			OBJECT=DataField_50
+				DataFieldName="Optical_Depth_Large_Average_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_50
+			OBJECT=DataField_51
+				DataFieldName="Mass_Concentration_Ocean"
+				DataType=DFNT_FLOAT32
+				DimList=("Solution_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_51
+			OBJECT=DataField_52
+				DataFieldName="Effective_Radius_Ocean"
+				DataType=DFNT_INT16
+				DimList=("Solution_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_52
+			OBJECT=DataField_53
+				DataFieldName="Cloud_Condensation_Nuclei_Ocean"
+				DataType=DFNT_FLOAT32
+				DimList=("Solution_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_53
+			OBJECT=DataField_54
+				DataFieldName="Asymmetry_Factor_Best_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_54
+			OBJECT=DataField_55
+				DataFieldName="Asymmetry_Factor_Average_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_55
+			OBJECT=DataField_56
+				DataFieldName="Backscattering_Ratio_Best_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_56
+			OBJECT=DataField_57
+				DataFieldName="Backscattering_Ratio_Average_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_57
+			OBJECT=DataField_58
+				DataFieldName="Angstrom_Exponent_1_Ocean"
+				DataType=DFNT_INT16
+				DimList=("Solution_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_58
+			OBJECT=DataField_59
+				DataFieldName="Angstrom_Exponent_2_Ocean"
+				DataType=DFNT_INT16
+				DimList=("Solution_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_59
+			OBJECT=DataField_60
+				DataFieldName="Least_Squares_Error_Ocean"
+				DataType=DFNT_INT16
+				DimList=("Solution_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_60
+			OBJECT=DataField_61
+				DataFieldName="Optical_Depth_Ratio_Small_Ocean_0.55micron"
+				DataType=DFNT_INT16
+				DimList=("Solution_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_61
+			OBJECT=DataField_62
+				DataFieldName="Optical_Depth_by_models_ocean"
+				DataType=DFNT_INT16
+				DimList=("Solution_Index","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_62
+			OBJECT=DataField_63
+				DataFieldName="Cloud_Fraction_Ocean"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_63
+			OBJECT=DataField_64
+				DataFieldName="Number_Pixels_Used_Ocean"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_64
+			OBJECT=DataField_65
+				DataFieldName="Mean_Reflectance_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_65
+			OBJECT=DataField_66
+				DataFieldName="STD_Reflectance_Ocean"
+				DataType=DFNT_INT16
+				DimList=("MODIS_Band_Ocean","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_66
+			OBJECT=DataField_67
+				DataFieldName="Quality_Assurance_Ocean"
+				DataType=DFNT_INT8
+				DimList=("Cell_Along_Swath","Cell_Across_Swath","QA_Byte_Ocean")
+			END_OBJECT=DataField_67
+			OBJECT=DataField_68
+				DataFieldName="Aerosol_Cldmask_Byproducts_Ocean"
+				DataType=DFNT_INT16
+				DimList=("Num_By_Products","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_68
+			OBJECT=DataField_69
+				DataFieldName="Deep_Blue_Aerosol_Optical_Depth_550_Land"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_69
+			OBJECT=DataField_70
+				DataFieldName="Deep_Blue_Aerosol_Optical_Depth_Land"
+				DataType=DFNT_INT16
+				DimList=("Num_DeepBlue_Wavelengths","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_70
+			OBJECT=DataField_71
+				DataFieldName="Deep_Blue_Angstrom_Exponent_Land"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_71
+			OBJECT=DataField_72
+				DataFieldName="Deep_Blue_Single_Scattering_Albedo_Land"
+				DataType=DFNT_INT16
+				DimList=("Num_DeepBlue_Wavelengths","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_72
+			OBJECT=DataField_73
+				DataFieldName="Deep_Blue_Surface_Reflectance_Land"
+				DataType=DFNT_INT16
+				DimList=("Num_DeepBlue_Wavelengths","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_73
+			OBJECT=DataField_74
+				DataFieldName="Deep_Blue_Mean_Reflectance_Land"
+				DataType=DFNT_INT16
+				DimList=("Num_DeepBlue_Wavelengths","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_74
+			OBJECT=DataField_75
+				DataFieldName="Deep_Blue_Number_Pixels_Used_Land"
+				DataType=DFNT_INT16
+				DimList=("Num_DeepBlue_Wavelengths","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_75
+			OBJECT=DataField_76
+				DataFieldName="Deep_Blue_Aerosol_Optical_Depth_550_Land_STD"
+				DataType=DFNT_INT16
+				DimList=("Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_76
+			OBJECT=DataField_77
+				DataFieldName="Deep_Blue_Aerosol_Optical_Depth_Land_STD"
+				DataType=DFNT_INT16
+				DimList=("Num_DeepBlue_Wavelengths","Cell_Along_Swath","Cell_Across_Swath")
+			END_OBJECT=DataField_77
+		END_GROUP=DataField
+		GROUP=MergedFields
+		END_GROUP=MergedFields
+	END_GROUP=SWATH_1
+END_GROUP=SwathStructure
+GROUP=GridStructure
+END_GROUP=GridStructure
+GROUP=PointStructure
+END_GROUP=PointStructure
+END
+        Number_of_Instrument_Scans = 203
+        Maximum_Number_of_1km_Frames = 135
+        title = 
+ MODIS HDF File Specification MOD04_L2: MODIS Level 2 Aerosol 
+ Land and Ocean Product
+        Slope_and_Offset_Usage = 
+ The local SDS scale_factor and add_offset attributes are used for the      
+ conversion of stored integer data to geophysical floating point numbers.   
+ The implementation follows conventional HDF usage (See HDF Users Guide):   
+                                                                            
+       float value = scale_factor*(stored integer - add_offset)             
+                                                                            
+ The unit of the derived floating point value is indicated in the 'units' 
+ local attribute which is also provided.
+        CoreMetadata.0 = 
+GROUP                  = INVENTORYMETADATA
+  GROUPTYPE            = MASTERGROUP
+
+  GROUP                  = ECSDATAGRANULE
+
+    OBJECT                 = LOCALGRANULEID
+      NUM_VAL              = 1
+      VALUE                = "MYD04_L2.A2007197.1120.051.2009090043119.hdf"
+    END_OBJECT             = LOCALGRANULEID
+
+    OBJECT                 = PRODUCTIONDATETIME
+      NUM_VAL              = 1
+      VALUE                = "2009-03-31T04:31:19.000Z"
+    END_OBJECT             = PRODUCTIONDATETIME
+
+    OBJECT                 = DAYNIGHTFLAG
+      NUM_VAL              = 1
+      VALUE                = "Day"
+    END_OBJECT             = DAYNIGHTFLAG
+
+    OBJECT                 = REPROCESSINGACTUAL
+      NUM_VAL              = 1
+      VALUE                = "processed once"
+    END_OBJECT             = REPROCESSINGACTUAL
+
+    OBJECT                 = LOCALVERSIONID
+      NUM_VAL              = 1
+      VALUE                = "051"
+    END_OBJECT             = LOCALVERSIONID
+
+    OBJECT                 = REPROCESSINGPLANNED
+      NUM_VAL              = 1
+      VALUE                = "further update is anticipated"
+    END_OBJECT             = REPROCESSINGPLANNED
+
+  END_GROUP              = ECSDATAGRANULE
+
+  GROUP                  = MEASUREDPARAMETER
+
+    OBJECT                 = MEASUREDPARAMETERCONTAINER
+      CLASS                = "1"
+
+      GROUP                  = QAFLAGS
+        CLASS                = "1"
+
+        OBJECT                 = SCIENCEQUALITYFLAG
+          NUM_VAL              = 1
+          VALUE                = "Not Investigated"
+          CLASS                = "1"
+        END_OBJECT             = SCIENCEQUALITYFLAG
+
+        OBJECT                 = AUTOMATICQUALITYFLAGEXPLANATION
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "SuccessfulRetrievalPct>25%"
+        END_OBJECT             = AUTOMATICQUALITYFLAGEXPLANATION
+
+        OBJECT                 = AUTOMATICQUALITYFLAG
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "Passed"
+        END_OBJECT             = AUTOMATICQUALITYFLAG
+
+        OBJECT                 = SCIENCEQUALITYFLAGEXPLANATION
+          NUM_VAL              = 1
+          VALUE                = "See http://modis-atmos.gsfc.nasa.gov/validation.html for more details on MODIS Atmosphere data quality."
+          CLASS                = "1"
+        END_OBJECT             = SCIENCEQUALITYFLAGEXPLANATION
+
+      END_GROUP              = QAFLAGS
+
+      GROUP                  = QASTATS
+        CLASS                = "1"
+
+        OBJECT                 = QAPERCENTMISSINGDATA
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = 23
+        END_OBJECT             = QAPERCENTMISSINGDATA
+
+      END_GROUP              = QASTATS
+
+      OBJECT                 = PARAMETERNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "Corrected_Optical_Depth_Land"
+      END_OBJECT             = PARAMETERNAME
+
+    END_OBJECT             = MEASUREDPARAMETERCONTAINER
+
+    OBJECT                 = MEASUREDPARAMETERCONTAINER
+      CLASS                = "2"
+
+      GROUP                  = QAFLAGS
+        CLASS                = "2"
+
+        OBJECT                 = SCIENCEQUALITYFLAG
+          NUM_VAL              = 1
+          VALUE                = "Not Investigated"
+          CLASS                = "2"
+        END_OBJECT             = SCIENCEQUALITYFLAG
+
+        OBJECT                 = AUTOMATICQUALITYFLAGEXPLANATION
+          NUM_VAL              = 1
+          CLASS                = "2"
+          VALUE                = "SuccessfulRetrievalPct>25%"
+        END_OBJECT             = AUTOMATICQUALITYFLAGEXPLANATION
+
+        OBJECT                 = AUTOMATICQUALITYFLAG
+          NUM_VAL              = 1
+          CLASS                = "2"
+          VALUE                = "Passed"
+        END_OBJECT             = AUTOMATICQUALITYFLAG
+
+        OBJECT                 = SCIENCEQUALITYFLAGEXPLANATION
+          NUM_VAL              = 1
+          VALUE                = "See http://modis-atmos.gsfc.nasa.gov/validation.html for more details on MODIS Atmosphere data quality."
+          CLASS                = "2"
+        END_OBJECT             = SCIENCEQUALITYFLAGEXPLANATION
+
+      END_GROUP              = QAFLAGS
+
+      GROUP                  = QASTATS
+        CLASS                = "2"
+
+        OBJECT                 = QAPERCENTMISSINGDATA
+          NUM_VAL              = 1
+          CLASS                = "2"
+          VALUE                = 44
+        END_OBJECT             = QAPERCENTMISSINGDATA
+
+      END_GROUP              = QASTATS
+
+      OBJECT                 = PARAMETERNAME
+        CLASS                = "2"
+        NUM_VAL              = 1
+        VALUE                = "Effective_Optical_Depth_Average_Ocean"
+      END_OBJECT             = PARAMETERNAME
+
+    END_OBJECT             = MEASUREDPARAMETERCONTAINER
+
+  END_GROUP              = MEASUREDPARAMETER
+
+  GROUP                  = ORBITCALCULATEDSPATIALDOMAIN
+
+    OBJECT                 = ORBITCALCULATEDSPATIALDOMAINCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = EQUATORCROSSINGDATE
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "2007-07-16"
+      END_OBJECT             = EQUATORCROSSINGDATE
+
+      OBJECT                 = EQUATORCROSSINGTIME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "11:58:00.083525"
+      END_OBJECT             = EQUATORCROSSINGTIME
+
+      OBJECT                 = ORBITNUMBER
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = 27658
+      END_OBJECT             = ORBITNUMBER
+
+      OBJECT                 = EQUATORCROSSINGLONGITUDE
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = -155.724083103238
+      END_OBJECT             = EQUATORCROSSINGLONGITUDE
+
+    END_OBJECT             = ORBITCALCULATEDSPATIALDOMAINCONTAINER
+
+  END_GROUP              = ORBITCALCULATEDSPATIALDOMAIN
+
+  GROUP                  = COLLECTIONDESCRIPTIONCLASS
+
+    OBJECT                 = VERSIONID
+      NUM_VAL              = 1
+      VALUE                = 51
+    END_OBJECT             = VERSIONID
+
+    OBJECT                 = SHORTNAME
+      NUM_VAL              = 1
+      VALUE                = "MYD04_L2"
+    END_OBJECT             = SHORTNAME
+
+  END_GROUP              = COLLECTIONDESCRIPTIONCLASS
+
+  GROUP                  = INPUTGRANULE
+
+    OBJECT                 = INPUTPOINTER
+      NUM_VAL              = 70
+      VALUE                = ("MYD03.A2007197.1120.005.2009089033036.hdf", "MYD02QKM.A2007197.1120.005.2009089160337.hdf", "MYD02HKM.A2007197.1120.005.2009089160337.hdf", "MYD021KM.A2007197.1120.005.2009089160337.hdf", "MYD35_L2.A2007197.1120.005.2009089162710.hdf", "small_v2c1.dat.v3", "
+          small_v1c1.dat.v2", "small_v3c1.dat.v2", "big_v2c1.dat.v5", "big_v1c1.dat.v2", "big_v3c1.dat.v2", "lookup_land_w0466.v1", "lookup_land_w0553.v1", "lookup_land_w0644.v1", "lookup_land_w2119.v1", "aerosol_land_map.v2", "gdas1.PGrbF00.070716.12z", "TOAST_070716.GRB", "
+          TABLE.MODIS", "TERPRS.DAT", "nvalx_412table.bin", "nvalx_470table.bin", "nvalx_650table.bin", "r865_glob.bin", "terrain_flag_glob.bin", "terrain_flag_glob_new.bin", "r412_glob_ref.bin", "r470_glob_ref.bin", "r470_glob_back_ref.bin", "r650_glob_ref.bin", "r650_glob_ref2.bin", 
+          "r470_glob_ref2.bin", "r470_glob_back_ref2.bin", "r412_glob_mam.bin", "r412_glob_jas.bin", "r412_glob_mam_back.bin", "r412_glob_jas_back.bin", "r412_glob_mam_back40offnad.bin", "r412_glob_jas_back40offnad.bin", "r470_glob_mam.bin", "r470_glob_jas.bin", "r470_glob_mam_back.bin", 
+          "r470_glob_jas_back.bin", "r470_glob_mam_back40offnad.bin", "r470_glob_jas_back40offnad.bin", "r650_glob_mam.bin", "r650_glob_jas.bin", "r650_glob_mam_back.bin", "r650_glob_jas_back.bin", "r650_glob_mam_back40offnad.bin", "r650_glob_jas_back40offnad.bin")
+    END_OBJECT             = INPUTPOINTER
+
+  END_GROUP              = INPUTGRANULE
+
+  GROUP                  = SPATIALDOMAINCONTAINER
+
+    GROUP                  = HORIZONTALSPATIALDOMAINCONTAINER
+
+      GROUP                  = BOUNDINGRECTANGLE
+
+        OBJECT                 = EASTBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = 40.5766210220238
+        END_OBJECT             = EASTBOUNDINGCOORDINATE
+
+        OBJECT                 = WESTBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = 1.16048765955005
+        END_OBJECT             = WESTBOUNDINGCOORDINATE
+
+        OBJECT                 = SOUTHBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = 38.3300805142752
+        END_OBJECT             = SOUTHBOUNDINGCOORDINATE
+
+        OBJECT                 = NORTHBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = 60.1792778150488
+        END_OBJECT             = NORTHBOUNDINGCOORDINATE
+
+      END_GROUP              = BOUNDINGRECTANGLE
+
+    END_GROUP              = HORIZONTALSPATIALDOMAINCONTAINER
+
+  END_GROUP              = SPATIALDOMAINCONTAINER
+
+  GROUP                  = RANGEDATETIME
+
+    OBJECT                 = RANGEENDINGDATE
+      NUM_VAL              = 1
+      VALUE                = "2007-07-16"
+    END_OBJECT             = RANGEENDINGDATE
+
+    OBJECT                 = RANGEENDINGTIME
+      NUM_VAL              = 1
+      VALUE                = "11:25:00.000000"
+    END_OBJECT             = RANGEENDINGTIME
+
+    OBJECT                 = RANGEBEGINNINGDATE
+      NUM_VAL              = 1
+      VALUE                = "2007-07-16"
+    END_OBJECT             = RANGEBEGINNINGDATE
+
+    OBJECT                 = RANGEBEGINNINGTIME
+      NUM_VAL              = 1
+      VALUE                = "11:20:00.000000"
+    END_OBJECT             = RANGEBEGINNINGTIME
+
+  END_GROUP              = RANGEDATETIME
+
+  GROUP                  = PGEVERSIONCLASS
+
+    OBJECT                 = PGEVERSION
+      NUM_VAL              = 1
+      VALUE                = "51.0.2"
+    END_OBJECT             = PGEVERSION
+
+  END_GROUP              = PGEVERSIONCLASS
+
+  GROUP                  = ASSOCIATEDPLATFORMINSTRUMENTSENSOR
+
+    OBJECT                 = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = ASSOCIATEDSENSORSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "MODIS"
+      END_OBJECT             = ASSOCIATEDSENSORSHORTNAME
+
+      OBJECT                 = ASSOCIATEDPLATFORMSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "Aqua"
+      END_OBJECT             = ASSOCIATEDPLATFORMSHORTNAME
+
+      OBJECT                 = ASSOCIATEDINSTRUMENTSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "MODIS"
+      END_OBJECT             = ASSOCIATEDINSTRUMENTSHORTNAME
+
+    END_OBJECT             = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+
+  END_GROUP              = ASSOCIATEDPLATFORMINSTRUMENTSENSOR
+
+  GROUP                  = ADDITIONALATTRIBUTES
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "SuccessfulRetrievalPct_Land"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "1"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "   77.40"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "2"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "2"
+        NUM_VAL              = 1
+        VALUE                = "SuccessfulRetrievalPct_Ocean"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "2"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "2"
+          VALUE                = "   55.64"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "3"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "3"
+        NUM_VAL              = 1
+        VALUE                = "LowConfidentClearPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "3"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "3"
+          VALUE                = "   12.53"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "4"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "4"
+        NUM_VAL              = 1
+        VALUE                = "DayProcessedPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "4"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "4"
+          VALUE                = "  100.00"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "5"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "5"
+        NUM_VAL              = 1
+        VALUE                = "NightProcessedPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "5"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "5"
+          VALUE                = "    0.00"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "6"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "6"
+        NUM_VAL              = 1
+        VALUE                = "SunglintProcessedPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "6"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "6"
+          VALUE                = "   38.31"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "7"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "7"
+        NUM_VAL              = 1
+        VALUE                = "Snow_IceSurfaceProcessedPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "7"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "7"
+          VALUE                = "    0.01"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "8"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "8"
+        NUM_VAL              = 1
+        VALUE                = "LandProcessedPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "8"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "8"
+          VALUE                = "   81.69"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "9"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "9"
+        NUM_VAL              = 1
+        VALUE                = "WaterProcessedPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "9"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "9"
+          VALUE                = "   18.31"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "10"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "10"
+        NUM_VAL              = 1
+        VALUE                = "ShadowFoundPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "10"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "10"
+          VALUE                = "    0.47"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "11"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "11"
+        NUM_VAL              = 1
+        VALUE                = "ThinCirrusSolarFoundPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "11"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "11"
+          VALUE                = "    3.57"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "12"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "12"
+        NUM_VAL              = 1
+        VALUE                = "ThinCirrusIR_FoundPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "12"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "12"
+          VALUE                = "    0.74"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "13"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "13"
+        NUM_VAL              = 1
+        VALUE                = "NonCloudObstructionFoundPct"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "13"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "13"
+          VALUE                = "    0.13"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "14"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "14"
+        NUM_VAL              = 1
+        VALUE                = "MaxSolarZenithAngle"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "14"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "14"
+          VALUE                = "   43.92"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "15"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "15"
+        NUM_VAL              = 1
+        VALUE                = "MinSolarZenithAngle"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "15"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "15"
+          VALUE                = "   17.03"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+  END_GROUP              = ADDITIONALATTRIBUTES
+
+END_GROUP              = INVENTORYMETADATA
+
+END
+        ArchiveMetadata.0 = 
+GROUP                  = ARCHIVEDMETADATA
+  GROUPTYPE            = MASTERGROUP
+
+  OBJECT                 = PROCESSINGENVIRONMENT
+    NUM_VAL              = 1
+    VALUE                = "Linux minion5250 2.6.20.3 #1 SMP Thu Mar 22 09:36:24 EST 2007 i686 Intel(R) Xeon(R) CPU            5140  @ 2.33GHz unknown GNU/Linux"
+  END_OBJECT             = PROCESSINGENVIRONMENT
+
+  GROUP                  = ALGORITHMPACKAGE
+
+    OBJECT                 = ALGORITHMPACKAGEACCEPTANCEDATE
+      NUM_VAL              = 1
+      VALUE                = "June 1997"
+    END_OBJECT             = ALGORITHMPACKAGEACCEPTANCEDATE
+
+    OBJECT                 = ALGORITHMPACKAGEMATURITYCODE
+      NUM_VAL              = 1
+      VALUE                = "at-launch"
+    END_OBJECT             = ALGORITHMPACKAGEMATURITYCODE
+
+    OBJECT                 = ALGORITHMPACKAGENAME
+      NUM_VAL              = 1
+      VALUE                = "ATBD-MOD-02"
+    END_OBJECT             = ALGORITHMPACKAGENAME
+
+    OBJECT                 = ALGORITHMPACKAGEVERSION
+      NUM_VAL              = 1
+      VALUE                = "2"
+    END_OBJECT             = ALGORITHMPACKAGEVERSION
+
+    OBJECT                 = LOCALINPUTGRANULEID
+      NUM_VAL              = 10
+      VALUE                = ("MYD03.A2007197.1120.005.2009089033036.hdf", "MYD02QKM.A2007197.1120.005.2009089160337.hdf", "MYD02HKM.A2007197.1120.005.2009089160337.hdf", "MYD021KM.A2007197.1120.005.2009089160337.hdf", "MYD35_L2.A2007197.1120.005.2009089162710.hdf")
+    END_OBJECT             = LOCALINPUTGRANULEID
+
+    OBJECT                 = INSTRUMENTNAME
+      NUM_VAL              = 1
+      VALUE                = "Moderate Resolution Imaging Spectroradiometer"
+    END_OBJECT             = INSTRUMENTNAME
+
+  END_GROUP              = ALGORITHMPACKAGE
+
+  GROUP                  = GPOLYGON
+
+    OBJECT                 = GPOLYGONCONTAINER
+      CLASS                = "1"
+
+      GROUP                  = GRING
+        CLASS                = "1"
+
+        OBJECT                 = EXCLUSIONGRINGFLAG
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "N"
+        END_OBJECT             = EXCLUSIONGRINGFLAG
+
+      END_GROUP              = GRING
+
+      GROUP                  = GRINGPOINT
+        CLASS                = "1"
+
+        OBJECT                 = GRINGPOINTLONGITUDE
+          NUM_VAL              = 4
+          CLASS                = "1"
+          VALUE                = (41.005143755139, 13.4775844262257, 0.85996452252549, 39.4960565922396)
+        END_OBJECT             = GRINGPOINTLONGITUDE
+
+        OBJECT                 = GRINGPOINTLATITUDE
+          NUM_VAL              = 4
+          CLASS                = "1"
+          VALUE                = (42.2062833902628, 38.3192327496645, 54.5609239043484, 60.517329144348)
+        END_OBJECT             = GRINGPOINTLATITUDE
+
+        OBJECT                 = GRINGPOINTSEQUENCENO
+          NUM_VAL              = 4
+          CLASS                = "1"
+          VALUE                = (1, 2, 3, 4)
+        END_OBJECT             = GRINGPOINTSEQUENCENO
+
+      END_GROUP              = GRINGPOINT
+
+    END_OBJECT             = GPOLYGONCONTAINER
+
+  END_GROUP              = GPOLYGON
+
+  OBJECT                 = VERYGOODQUALITYDATAPCT_LAND
+    NUM_VAL              = 1
+    VALUE                = "0.00"
+  END_OBJECT             = VERYGOODQUALITYDATAPCT_LAND
+
+  OBJECT                 = GOODQUALITYDATAPCT_LAND
+    NUM_VAL              = 1
+    VALUE                = "100.00"
+  END_OBJECT             = GOODQUALITYDATAPCT_LAND
+
+  OBJECT                 = MARGINALQUALITYDATAPCT_LAND
+    NUM_VAL              = 1
+    VALUE                = "0.00"
+  END_OBJECT             = MARGINALQUALITYDATAPCT_LAND
+
+  OBJECT                 = BADQUALITYDATAPCT_LAND
+    NUM_VAL              = 1
+    VALUE                = "0.00"
+  END_OBJECT             = BADQUALITYDATAPCT_LAND
+
+  OBJECT                 = VERYGOODQUALITYDATAPCT_OCEAN
+    NUM_VAL              = 1
+    VALUE                = "64.65"
+  END_OBJECT             = VERYGOODQUALITYDATAPCT_OCEAN
+
+  OBJECT                 = GOODQUALITYDATAPCT_OCEAN
+    NUM_VAL              = 1
+    VALUE                = "3.80"
+  END_OBJECT             = GOODQUALITYDATAPCT_OCEAN
+
+  OBJECT                 = MARGINALQUALITYDATAPCT_OCEAN
+    NUM_VAL              = 1
+    VALUE                = "15.96"
+  END_OBJECT             = MARGINALQUALITYDATAPCT_OCEAN
+
+  OBJECT                 = BADQUALITYDATAPCT_OCEAN
+    NUM_VAL              = 1
+    VALUE                = "17.00"
+  END_OBJECT             = BADQUALITYDATAPCT_OCEAN
+
+  OBJECT                 = ALGORITHMSOFTWAREVERSIONLAND
+    NUM_VAL              = 1
+    VALUE                = "2"
+  END_OBJECT             = ALGORITHMSOFTWAREVERSIONLAND
+
+  OBJECT                 = ALGORITHMSOFTWAREVERSIONOCEAN
+    NUM_VAL              = 1
+    VALUE                = "2"
+  END_OBJECT             = ALGORITHMSOFTWAREVERSIONOCEAN
+
+  OBJECT                 = DESCRREVISION
+    NUM_VAL              = 1
+    VALUE                = "5.0"
+  END_OBJECT             = DESCRREVISION
+
+  OBJECT                 = PRODUCTIONHISTORY
+    NUM_VAL              = 1
+    VALUE                = "PGE04:51.0.2"
+  END_OBJECT             = PRODUCTIONHISTORY
+
+  OBJECT                 = LONGNAME
+    NUM_VAL              = 1
+    VALUE                = "MODIS/Aqua Aerosol 5-Min L2 Swath 10km"
+  END_OBJECT             = LONGNAME
+
+END_GROUP              = ARCHIVEDMETADATA
+
+END

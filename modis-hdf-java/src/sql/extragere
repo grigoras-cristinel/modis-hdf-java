@@ -1,0 +1,4 @@
+select substr(databaseKey,2,7)||statie as kk,* from puncte 
+where kk = '2006072P_448_253' 
+
+--MOD04_L2.A2006207.0905.006.2014358173358.hdf
