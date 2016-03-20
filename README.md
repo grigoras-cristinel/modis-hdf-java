@@ -1,5 +1,5 @@
 # modis-hdf-java
-Modis and HDF data extraction tools
+HDF data extraction tools for MODIS: MOD04 MOD06
 Requirements
-- HDFView, hdfjava libs in classpath
+- HDFView, hdfjava libs
 
