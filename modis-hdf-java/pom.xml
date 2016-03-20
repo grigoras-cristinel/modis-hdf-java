@@ -386,6 +386,30 @@
 			</build>
 		</profile>
 		<profile>
+			<id>Interface</id>
+			<properties>
+				<text.rulare>Ruleaza local</text.rulare>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.4.0</version>
+						<configuration>
+							<executable>java</executable>
+							<arguments>
+							    <argument>-splash:src/main/resources/splash-800x600.png</argument>
+								<argument>-classpath</argument>
+								<classpath />
+								<argument>ro.grig.face.MainInterface</argument>
+							</arguments>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>head-extract</id>
 			<properties>
 				<text.rulare>Ruleaza pe serverul icimhead</text.rulare>
