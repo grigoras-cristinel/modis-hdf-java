@@ -161,7 +161,7 @@ public class InterprocessClient implements Runnable {
       synchronized (this.pendingData) {
          List<ByteBuffer> queue = (List<ByteBuffer>) this.pendingData.get(socketChannel);
          // Write until there's not more data ...
-         while (!queue.isEmpty()) {
+         while (queue != null && !queue.isEmpty()) {
             ByteBuffer buf = (ByteBuffer) queue.get(0);
             socketChannel.write(buf);
             if (buf.remaining() > 0) {

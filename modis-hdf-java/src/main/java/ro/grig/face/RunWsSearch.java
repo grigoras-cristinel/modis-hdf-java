@@ -152,6 +152,7 @@ public class RunWsSearch extends JDialog {
                      searchConfig.load();
                      sc.postLogMessage("Deschid fisier " + mfile + ".");
                      sc.postLogMessage("Proiect search: {}.", searchConfig.getString(Sc.PROJECT_NAME));
+                     lblPleaseOpenProiect.setText("" + searchConfig.getFileName());
                   } catch (ConfigurationException e1) {
                      e1.printStackTrace();
                   }

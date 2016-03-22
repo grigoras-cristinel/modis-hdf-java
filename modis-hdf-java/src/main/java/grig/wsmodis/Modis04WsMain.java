@@ -244,8 +244,8 @@ public class Modis04WsMain extends RunProcessAbstractSupport {
          logger.debug("Workspace : {}", WORKSPACE);
          PrintWriter outMisFileData = new PrintWriter(
                WORKSPACE + "/" + proiect + "_" + colection + "_" + product + "_missing_ids.txt");
-         PrintWriter oufileUrls = new PrintWriter(
-               WORKSPACE + "/" + proiect + "_" + colection + "_" + product + "_download_url_list.txt");
+         String dfn = WORKSPACE + "/" + proiect + "_" + colection + "_" + product + "_download_url_list.txt";
+         PrintWriter oufileUrls = new PrintWriter(dfn);
          for (String satelit : satelitii) {
             sendHeartBeat();
             DateTime start = dataStart;
@@ -315,6 +315,7 @@ public class Modis04WsMain extends RunProcessAbstractSupport {
                   Elements elFileInfos = docFileInfo.getElementsByTag("mws:getfilepropertiesresponse");
                   Element rootInfos = elFileInfos.first();
                   logger.debug("Response size: " + rootInfos.children().size());
+                  sendMessage("Response size: " + rootInfos.children().size());
                   ArrayList<String> fileMiss = new ArrayList<>();
                   for (Element elUnfile : rootInfos.children()) {
                      // sunt pe un return
@@ -326,6 +327,8 @@ public class Modis04WsMain extends RunProcessAbstractSupport {
                      File totest = new File(HDF_STORAGE_LOCAITON + "/" + filename);
                      boolean exist = totest.exists();
                      logger.debug("EL:" + fileId + " - " + checksum + "-" + filename + " - exista=" + exist);
+                     sendMessage(
+                           "[id:" + fileId + ", chksum:" + checksum + ", fname:" + filename + ", exist:" + exist + "]");
                      if (!exist) {
                         outMisFileData.println(fileId + "," + filename + "," + checksum);
                         fileMiss.add(fileId);
@@ -354,6 +357,7 @@ public class Modis04WsMain extends RunProcessAbstractSupport {
                   Elements furesps = furoot.getElementsByTag("return");
                   for (Element a1 : furesps) {
                      logger.debug("Url for file:" + a1.ownText());
+                     sendMessage("[url:" + a1.ownText() + "]");
                      sendHeartBeat();
                      oufileUrls.println(a1.ownText());
                   }
@@ -368,6 +372,7 @@ public class Modis04WsMain extends RunProcessAbstractSupport {
          }
          oufileUrls.close();
          outMisFileData.close();
+         sendMessage("Fisier cu url-uri: " + dfn);
       } catch (IOException e) {
          e.printStackTrace();
       }

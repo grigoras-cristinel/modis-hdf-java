@@ -43,6 +43,20 @@ public class RunQueryExtractPoint extends JDialog {
 
    public String workspace;
 
+   private class OkButtonActionListener implements ActionListener {
+
+      public void actionPerformed(final ActionEvent e) {
+         RunQueryExtractPoint.this.setVisible(false);
+         RunQueryExtractPoint.this.dispose();
+      }
+   }
+
+   private class BtnRunActionListener implements ActionListener {
+
+      public void actionPerformed(final ActionEvent e) {
+      }
+   }
+
    private class BtnncarcaFisierActionListener implements ActionListener {
 
       public void actionPerformed(final ActionEvent e) {
@@ -202,10 +216,12 @@ public class RunQueryExtractPoint extends JDialog {
       }
       {
          JButton btnRun = new JButton("Run !!!");
+         btnRun.addActionListener(new BtnRunActionListener());
          contentPanel.add(btnRun, "6, 14");
       }
       {
          JButton okButton = new JButton("OK");
+         okButton.addActionListener(new OkButtonActionListener());
          contentPanel.add(okButton, "8, 14");
          okButton.setActionCommand("OK");
          getRootPane().setDefaultButton(okButton);

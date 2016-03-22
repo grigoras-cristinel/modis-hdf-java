@@ -66,7 +66,7 @@ public abstract class RunProcessAbstractSupport implements ComunicateProcessStat
    public void sendMessage(String message) {
       if (client != null) {
          RspHandler handler = new RspHandler();
-         String mesaj = jvmName + "::M/" + message;
+         String mesaj = jvmName + "::M::" + message;
          client.send(mesaj.getBytes(), handler);
       }
    }
