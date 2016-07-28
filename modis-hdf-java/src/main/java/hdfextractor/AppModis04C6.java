@@ -209,7 +209,7 @@ public class AppModis04C6 {
 			debug.println("Output file:" + fileOutput);
 			try {
 				PrintWriter pw = new PrintWriter(fileOutput);
-				pw.println(Mod06C06TO.toLongHeader());
+				pw.println(Mod04C06TO.toLongHeader());
 				outputFiles.put(siteName, pw);
 			} catch (Exception e) {
 				e.printStackTrace(debug);
