@@ -488,6 +488,7 @@
 			<id>head-extract04</id>
 			<properties>
 				<text.rulare>Ruleaza pe serverul icimhead</text.rulare>
+				<java.library.path>/com/users/grig/app/HDFView/2.11.0/lib</java.library.path>
 			</properties>
 			<build>
 				<plugins>
