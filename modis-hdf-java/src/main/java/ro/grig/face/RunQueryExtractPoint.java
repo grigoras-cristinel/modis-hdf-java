@@ -32,6 +32,8 @@ import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
 
+import hdfextractor.AppModis04C6S;
+
 /**
  * Porneste rularea proceselor pentru extragerea din fisiere hdf a punctelor
  * 
@@ -54,6 +56,15 @@ public class RunQueryExtractPoint extends JDialog {
    private class BtnRunActionListener implements ActionListener {
 
       public void actionPerformed(final ActionEvent e) {
+         sc.postLogMessage("Start rulare proiect input file :{}", currentDialogProperties.getFileName());
+         String javaHome = System.getProperty("java.home");
+         String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
+         String classpath = System.getProperty("java.class.path");
+         String className = AppModis04C6S.class.getCanonicalName();
+         ProcessBuilder wsproc = new ProcessBuilder(javaBin, "-cp", classpath, className, "-f",
+               currentDialogProperties.getFile().getAbsolutePath());
+         wsproc.environment().put("processname", "RunQueryExtractPoint");
+         sc.runProcess(wsproc);
       }
    }
 

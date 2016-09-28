@@ -244,6 +244,8 @@ public class ModisExtractQueryPoint extends JDialog {
          for (StatieMeteoPoint stmp : data) {
             prSe.addProperty(Sc.PROJECT_POINTS, stmp.toJson());
          }
+         prSe.addProperty(Sc.CURRENT_WORKSPACE, sc.getConfigProiect().getProperty(Sc.CURRENT_WORKSPACE));
+         prSe.addProperty(Sc.HDF_STORAGE_LOCATION, sc.getConfigProiect().getProperty(Sc.HDF_STORAGE_LOCATION));
          prSe.setFileName(sc.getWorkspacePath() + "/" + fname);
          try {
             prSe.save();
